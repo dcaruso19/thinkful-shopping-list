@@ -11,6 +11,7 @@ function initializeForm() {
     $("a#add-item").click(shoppingList);
     $("#item").keydown(function (enter) {
         if (enter.keyCode == 13) {
+            enter.preventDefault();
             shoppingList();
         }
     });
@@ -23,6 +24,7 @@ function initializeForm() {
         var items = $("ul#items");
         var purchased = $("ul#purchased");
         var itemToBuy = itemInput.val();
+        var deleted = $("#deleted");
         itemInput.val("");
 
         // create a list item and checkbox, assigning an id to it.
@@ -31,9 +33,14 @@ function initializeForm() {
         addItem(listItem);
 
         //delete items
-        listItem.find("a").click(function () {
+
+
+        listItem.find("a").click(function () { 
             $(this).parent().hide('slow', function () {
                 $(this).remove();
+                deleted.append(listItem);
+                listItem.show();
+
             });
         });
 
@@ -49,6 +56,10 @@ function initializeForm() {
             purchased.append(listItem);
             listItem.show('slow');
         }
+
+
+    
+
         //toggle!! (sorta)
         listItem.find("input:checkbox").click(function () {
             this.checked ? purchasedItem(listItem) : addItem(listItem);

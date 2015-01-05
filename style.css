@@ -76,6 +76,15 @@ li:nth-child(even) {
     background: #EB9494;
 }
 
+#deleted li:nth-child(odd) {
+    background:#C9C9C9;
+}
+
+#deleted li:nth-child(even) {
+    background:#E4E4E4;
+}
+
+
 li a {
     font-size:small;
 }
