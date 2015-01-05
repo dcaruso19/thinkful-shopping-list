@@ -11,7 +11,7 @@ body {
     border-radius: 5px 5px 0 0;
     box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 0 5px rgba(0, 0, 0, .3);
     border: 1px solid #6f212f;
-    background:#C7C7C7;
+    background:#EEEEEE;
 }
 h1 {
     color: black;
@@ -20,11 +20,12 @@ h1 {
     margin-bottom:40px;
     font-size: 28px;
     text-align:center;
-    font-family:helvetica;
+    font-family:Trebuchet MS;
 }
 
 h3 {
     margin-top:100px;
+    font-family:Trebuchet MS;
 }
 input#item {
     float:left;
@@ -56,6 +57,7 @@ li {
     line-height:1.6;
     padding:10px;
     border:#222 solid 1px;
+    font-family:Trebuchet MS;
 }
 
 #items li:nth-child(odd) {
